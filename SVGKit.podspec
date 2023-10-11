@@ -27,6 +27,8 @@ Pod::Spec.new do |s|
   s.pod_target_xcconfig = {
     'CLANG_CXX_LANGUAGE_STANDARD' => 'gnu++11',
     'CLANG_CXX_LIBRARY' => 'libc++',
-    'HEADER_SEARCH_PATHS' => '$(SDKROOT)/usr/include/libxml2'
+    'HEADER_SEARCH_PATHS' => '$(SDKROOT)/usr/include/libxml2',
+    'VALID_ARCHS' => 'x86_64 armv7 arm64',
+    'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'
   }
 end
